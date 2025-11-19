@@ -14,4 +14,4 @@ async function connectToDatabase() {
         console.log("Error caonnecting databases " + error);
     }
 }
-export { connectToDatabase };
+export { connectToDatabase, sequelize };
