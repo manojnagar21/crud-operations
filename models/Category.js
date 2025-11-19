@@ -1,19 +1,15 @@
 import { Sequelize, DataTypes } from 'sequelize';
 import '../server.js';
-const User = Sequelize.define("Users", {
+const Category = Sequelize.define("Category", {
     Id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
         allowNull: false,
     },
-    EmailId: {
+    Name: {
         type: DataTypes.STRING(255),
         unique: true,
-        allowNull: false,
-    },
-    Password: {
-        type: DataTypes.STRING(255),
         allowNull: false,
     },
     Status: {
@@ -22,4 +18,4 @@ const User = Sequelize.define("Users", {
         allowNull: true,
     }
 });
-export default { User };
+export default { Category };
